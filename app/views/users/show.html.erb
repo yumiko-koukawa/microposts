@@ -2,3 +2,11 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+
+<div class="user-profile">
+  <% if @user == current_user %>
+    <h2>name&nbsp;&nbsp;<%= @user.name %></h2>
+    <h2>e-mail&nbsp;&nbsp;<%= @user.email %></h2>
+  <% end %>
+    <h2>location&nbsp;&nbsp;<%= @user.location.present? ? @user.location : "＜no-data＞" %></h2>
+</div>
