@@ -1,0 +1,17 @@
+<section class="user_info">
+  <h1>
+    <%= gravatar_for @user %>
+    <%= @user.name %>
+  </h1>
+  <div>
+    <% if @user == current_user %>
+      <p>e-mail&nbsp;&nbsp;<%= @user.email %></p>
+    <% end %>
+      <p>location&nbsp;&nbsp;<%= @user.location.present? ? @user.location : "＜no-data＞" %></p>
+  </div>
+</section>
+<h3>
+  <%= link_to "User", @user %><br>
+  <%= link_to "Follow (#{@user.following_users.count})", followings_user_path(@user) %><br>
+  <%= link_to "Follower (#{@user.follower_users.count})", followers_user_path(@user) %>
+</h3>
