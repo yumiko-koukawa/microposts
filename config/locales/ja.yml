@@ -63,10 +63,15 @@ ja:
     static_pages:
       Micropost Feed: タイムライン
       Sign up now!: ユーザー登録
+    show:
+      Microposts: 投稿
     microposts:
+      Posted: ""
+      ago: 前
       delete: 削除
       You sure?: 削除していいですか？
     user_info:
+      location: ""
       view my profile: マイページ
       micropost: 投稿
       User: ユーザー

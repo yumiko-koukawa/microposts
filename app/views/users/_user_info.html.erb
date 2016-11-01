@@ -7,11 +7,11 @@
     <% if @user == current_user %>
       <p>e-mail&nbsp;&nbsp;<%= @user.email %></p>
     <% end %>
-      <p>location&nbsp;&nbsp;<%= @user.location.present? ? @user.location : "＜no-data＞" %></p>
+      <p><%= t('views.user_info.location') %>&nbsp;&nbsp;<%= @user.location.present? ? @user.location : "＜no-data＞" %></p>
   </div>
 </section>
 <h3>
   <%= link_to t('views.user_info.User'), @user %><br>
-  <%= link_to t('views.user_info.Follow') (#{@user.following_users.count})", followings_user_path(@user) %><br>
-  <%= link_to t('views.user_info.Follower') (#{@user.follower_users.count})", followers_user_path(@user) %>
+  <%= link_to t('views.user_info.Follow'), followings_user_path(@user) %>(<%= @user.following_users.count %>)<br>
+  <%= link_to t('views.user_info.Follower'), followers_user_path(@user) %>(<%= @user.follower_users.count %>)
 </h3>
