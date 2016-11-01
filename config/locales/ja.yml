@@ -55,17 +55,32 @@ ja:
     header:
       Help: ヘルプ
       Users: ユーザーページ
-      Profile: プロフィール
+      Account: アカウント
+      Profile: マイページ
       Settings: 設定
       Log out: ログアウト
       Log in: ログイン
     static_pages:
-      sign up now: ユーザー登録
+      Micropost Feed: タイムライン
+      Sign up now!: ユーザー登録
     microposts:
       delete: 削除
-      You sure: 削除していいですか？
-
-
+      You sure?: 削除していいですか？
+    user_info:
+      view my profile: マイページ
+      micropost: 投稿
+      User: ユーザー
+      Follow: フォロー
+      Follower: フォロワー
+    micropost_form:
+      Compose new micropost: 新規投稿を記入してください
+      Post: 投稿
+    pagination:
+      first: "最初"
+      last: "最後"
+      previous: "前"
+      next: "次"
+      truncate: "..."
 
 # model
   activerecord:
