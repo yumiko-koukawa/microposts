@@ -24,9 +24,13 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
+# 'therubyracer' # javascript runtime。lessをコンパイルするために必要
+#gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
+#gem 'twitter-bootstrap-rails' # Bootstrapの本体
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -45,7 +49,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-gem 'kaminari'
 end
 
+gem 'kaminari'
+
+# gem 'therubyracer' # javascript runtime。lessをコンパイルするために必要
+# gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
+# gem 'twitter-bootstrap-rails' # Bootstrapの本体

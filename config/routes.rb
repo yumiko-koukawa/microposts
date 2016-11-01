@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   get    'login' , to: 'sessions#new'
   post   'login' , to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
+  # get '/(:locale)' => 'layouts#application'
+  # scope "/(:locale)", locale: /en|ja/ do
+  #   resources :users
+  #   resource :sessions
+  # end
   
   resources :users do
     member do
