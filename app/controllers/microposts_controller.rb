@@ -32,6 +32,18 @@ class MicropostsController < ApplicationController
       end
   end
   
+  def favorite
+    original = Micropost.find(params[:id])
+    @micropost = current_user.microposts.build(original_user: original.id)
+    @micropost.content = "＃ お気に入り　#{original.user.name}さんの投稿　\n #{original.content}"
+      if @micropost.save
+       flash[:success] = "Favorite created!"
+       redirect_to current_user
+      else
+      redirect_to :back
+      end
+  end
+  
   private
   def micropost_params
     params.require(:micropost).permit(:content)

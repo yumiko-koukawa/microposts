@@ -71,6 +71,7 @@ ja:
       delete: 削除
       You sure?: 削除していいですか？
       retweet: リツイート
+      favorite: お気に入り
     user_info:
       location: ""
       view my profile: マイページ
