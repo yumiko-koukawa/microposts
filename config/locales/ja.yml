@@ -70,6 +70,7 @@ ja:
       ago: 前
       delete: 削除
       You sure?: 削除していいですか？
+      retweet: リツイート
     user_info:
       location: ""
       view my profile: マイページ

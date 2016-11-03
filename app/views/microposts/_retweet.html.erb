@@ -1,0 +1,10 @@
+<span>
+  <% if current_user == micropost.user %>
+  <% elsif micropost.original_user.nil? %>
+    <%= link_to t('views.microposts.retweet'), retweet_micropost_path(micropost),
+                         method: :post,
+                         data: { confirm: "リツイートしますか?" } %>
+  <% else %>
+    retweet済み
+  <% end %>
+</span>
