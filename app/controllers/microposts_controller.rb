@@ -23,7 +23,7 @@ class MicropostsController < ApplicationController
   def retweet
     original = Micropost.find(params[:id])
     @micropost = current_user.microposts.build(original_user: original.id)
-    @micropost.content = "＃ #{original.user.name}さんのリツイート　\n #{original.content}"
+    @micropost.content = "さんのリツイート　\n #{original.content}"
       if @micropost.save
        flash[:success] = "Retweet created!"
        redirect_to current_user
@@ -40,7 +40,7 @@ class MicropostsController < ApplicationController
        flash[:success] = "Favorite created!"
        redirect_to current_user
       else
-      redirect_to :back
+        redirect_to :back
       end
   end
   

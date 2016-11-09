@@ -65,6 +65,8 @@ ja:
       Sign up now!: ユーザー登録
     show:
       Microposts: 投稿
+      Retweet: リツイート
+      Favorite: お気に入り
     microposts:
       Posted: ""
       ago: 前

@@ -8,3 +8,5 @@
     favorite済み
   <% end %>
 </span>
+<%= link_to "favorite", micropost_favorites_path(micropost),
+                        method: :post, remote: true %>
