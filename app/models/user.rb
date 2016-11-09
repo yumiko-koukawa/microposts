@@ -19,6 +19,8 @@ class User < ActiveRecord::Base
   has_many :favorites, foreign_key: 'user_id', dependent: :destroy
   has_many :favorite_microposts, through: :favorites, source: :micropost
   
+  mount_uploader :avatar, AvatarUploader
+  
   # 他のユーザーをフォローする
   def follow(other_user)
     following_relationships.find_or_create_by(followed_id: other_user.id)

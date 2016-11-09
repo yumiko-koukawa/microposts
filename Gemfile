@@ -52,6 +52,8 @@ group :development do
 end
 
 gem 'kaminari'
+gem 'carrierwave'
+gem 'cloudinary'
 
 # gem 'therubyracer' # javascript runtime。lessをコンパイルするために必要
 # gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
