@@ -8,11 +8,11 @@ class UsersController < ApplicationController
     @count = @user.microposts.count
    @microposts = @user.microposts.order(created_at: :desc).page(params[:page]).per(3)
   end
-  
+
   def new
     @user = User.new
   end
-  
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -22,12 +22,12 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-  
+
   def edit
    # @user = User.find(params[:id])
    # render 'edit'
   end
-  
+
   def update
    # @user = User.find(params[:id])
     if @user.update(user_params)
@@ -37,21 +37,21 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def followings
     @title = "followings"
     @user = User.find(params[:id])
     @users = @user.following_users
     render 'show_follow'
   end
-  
+
   def followers
     @title = "followers"
     @user = User.find(params[:id]) 
     @users = @user.follower_users
     render 'show_follow'
   end
-  
+
   def favorites
     @title = 'Favorites'
     @count = @user.favorite_microposts.count
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password,
                                  :password_confirmation, :location)
   end
-  
+
   def set_params
     @user = User.find(params[:id])
   end

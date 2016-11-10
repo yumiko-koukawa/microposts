@@ -16,10 +16,8 @@ class User < ActiveRecord::Base
                                     foreign_key: "followed_id",
                                     dependent:   :destroy
   has_many :follower_users, through: :follower_relationships, source: :follower
-  
   has_many :favorites, foreign_key: 'user_id', dependent: :destroy
   has_many :favorite_microposts, through: :favorites, source: :micropost
-  
   mount_uploader :avatar, AvatarUploader
   
   # 他のユーザーをフォローする

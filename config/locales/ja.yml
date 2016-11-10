@@ -46,6 +46,7 @@ ja:
       submit: アカウントの作成
     edit:
       title: アカウント編集
+      avatar: プロフィール画像
       location: 居住地
       Update my account: アカウントを更新
 # view
@@ -64,7 +65,7 @@ ja:
       Micropost Feed: タイムライン
       Sign up now!: ユーザー登録
     show:
-      Microposts: 投稿
+      Micropost: 投稿
       Retweet: リツイート
       Favorite: お気に入り
     microposts:
@@ -73,7 +74,8 @@ ja:
       delete: 削除
       You sure?: 削除していいですか？
       retweet: リツイート
-      favorite: お気に入り
+      Favorite: お気に入り
+      Unfavorite: お気に入り解除
     user_info:
       location: ""
       view my profile: マイページ
@@ -242,6 +244,13 @@ ja:
       create: 登録する
       submit: 保存する
       update: 更新する
+    page_entries_info:
+      one_page:
+        zero: "<b>該当データがありません。</b>"
+        one: "<b>1件中 1-1 件を表示</b>"
+        display_entries: '1-%{count}件を表示中 / 合計%{count}件'
+      more_pages:
+        display_entries: '%{first}-%{last}件を表示中 / 合計%{total}件'
   number:
     currency:
       format:
